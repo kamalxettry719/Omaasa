@@ -1,0 +1,1347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Om Aasha Hospital Pvt. Ltd. | Dhangadhi, Kailali, Nepal</title>
+<meta name="description" content="Om Aasha Hospital Pvt. Ltd. — Premium multi-specialty healthcare in Dhangadhi, Kailali, Nepal. 24-Hour Emergency, expert doctors, modern diagnostics. DEMO WEBSITE.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect rx='22' width='100' height='100' fill='%230A5FA8'/%3E%3Cpath d='M50 24v52M24 50h52' stroke='%23ffffff' stroke-width='11' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+/* ============ TOKENS ============ */
+:root{
+  --blue-900:#062F52;
+  --blue-700:#0A5FA8;
+  --blue-600:#1173C4;
+  --blue-100:#E8F3FC;
+  --blue-50:#F4F9FE;
+  --green-600:#149A73;
+  --green-500:#1BB587;
+  --green-100:#E4F8F1;
+  --gold-500:#F2A93B;
+  --ink-900:#0F1E31;
+  --ink-700:#2A3B52;
+  --ink-500:#5B6B82;
+  --ink-300:#93A2B8;
+  --line:#E4EBF3;
+  --white:#FFFFFF;
+  --radius-lg:24px;
+  --radius-md:16px;
+  --radius-sm:10px;
+  --shadow-sm:0 2px 10px rgba(15,30,49,.06);
+  --shadow-md:0 12px 32px rgba(10,95,168,.12);
+  --shadow-lg:0 24px 60px rgba(10,95,168,.16);
+  --ff-display:'Fraunces',serif;
+  --ff-body:'Inter',sans-serif;
+  --ff-mono:'IBM Plex Mono',monospace;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--ff-body);color:var(--ink-700);background:var(--white);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+img{max-width:100%;display:block;}
+a{text-decoration:none;color:inherit;}
+ul{list-style:none;}
+button{font-family:inherit;cursor:pointer;border:none;background:none;}
+input,textarea,select{font-family:inherit;}
+.container{max-width:1240px;margin:0 auto;padding:0 24px;}
+h1,h2,h3,h4{font-family:var(--ff-display);color:var(--ink-900);font-weight:600;line-height:1.15;letter-spacing:-.01em;}
+.eyebrow{font-family:var(--ff-mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--green-600);font-weight:600;display:inline-flex;align-items:center;gap:8px;}
+.eyebrow::before{content:'';width:18px;height:2px;background:var(--green-600);border-radius:2px;}
+.section-head{max-width:640px;margin-bottom:48px;}
+.section-head h2{font-size:clamp(28px,3.6vw,42px);margin-top:12px;}
+.section-head p{margin-top:14px;color:var(--ink-500);font-size:16.5px;}
+.section-head.center{margin-left:auto;margin-right:auto;text-align:center;}
+section{padding:96px 0;}
+@media (max-width:768px){section{padding:64px 0;}}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 26px;border-radius:100px;font-weight:600;font-size:15px;transition:transform .25s ease, box-shadow .25s ease, background .25s ease;white-space:nowrap;}
+.btn-primary{background:var(--blue-700);color:#fff;box-shadow:0 10px 24px rgba(10,95,168,.28);}
+.btn-primary:hover{background:var(--blue-600);transform:translateY(-2px);box-shadow:0 14px 30px rgba(10,95,168,.35);}
+.btn-accent{background:var(--green-600);color:#fff;box-shadow:0 10px 24px rgba(20,154,115,.28);}
+.btn-accent:hover{background:var(--green-500);transform:translateY(-2px);}
+.btn-ghost{background:#fff;color:var(--blue-700);border:1.5px solid var(--line);}
+.btn-ghost:hover{border-color:var(--blue-700);transform:translateY(-2px);}
+.btn-outline-white{border:1.5px solid rgba(255,255,255,.5);color:#fff;}
+.btn-outline-white:hover{background:rgba(255,255,255,.12);}
+.btn-sm{padding:10px 18px;font-size:13.5px;}
+.pill{display:inline-flex;align-items:center;gap:8px;background:var(--blue-100);color:var(--blue-700);font-size:13px;font-weight:600;padding:7px 14px;border-radius:100px;}
+.icon{width:1em;height:1em;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;}
+.demo-tag{position:absolute;top:12px;right:12px;background:rgba(15,30,49,.72);color:#fff;font-family:var(--ff-mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;padding:4px 9px;border-radius:6px;z-index:2;}
+
+/* ============ TOP UTILITY BAR ============ */
+.topbar{background:var(--blue-900);color:#cfe3f5;font-size:13px;}
+.topbar .container{display:flex;align-items:center;justify-content:space-between;padding-top:9px;padding-bottom:9px;gap:16px;flex-wrap:wrap;}
+.topbar-left{display:flex;gap:22px;align-items:center;flex-wrap:wrap;}
+.topbar-left a{display:flex;align-items:center;gap:7px;color:#cfe3f5;transition:color .2s;}
+.topbar-left a:hover{color:#fff;}
+.topbar-right{display:flex;align-items:center;gap:16px;}
+.topbar-right .fb-btn{width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;transition:background .2s;}
+.topbar-right .fb-btn:hover{background:rgba(255,255,255,.22);}
+.rating-chip{display:flex;align-items:center;gap:5px;font-weight:600;color:#fff;}
+.rating-chip svg{color:var(--gold-500);}
+
+/* ============ NAVBAR ============ */
+.navbar{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);}
+.navbar .container{display:flex;align-items:center;justify-content:space-between;height:78px;gap:20px;}
+.brand{display:flex;align-items:center;gap:12px;}
+.brand-mark{width:44px;height:44px;border-radius:13px;background:linear-gradient(145deg,var(--blue-700),var(--blue-900));display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 6px 16px rgba(10,95,168,.3);}
+.brand-mark svg{width:24px;height:24px;color:#fff;}
+.brand-text{line-height:1.2;}
+.brand-text .name{font-family:var(--ff-display);font-weight:700;font-size:18px;color:var(--ink-900);}
+.brand-text .sub{font-size:11px;color:var(--ink-500);letter-spacing:.03em;}
+.nav-links{display:flex;align-items:center;gap:4px;}
+.nav-links a{padding:10px 15px;border-radius:100px;font-size:14.5px;font-weight:500;color:var(--ink-700);transition:background .2s,color .2s;}
+.nav-links a:hover{background:var(--blue-50);color:var(--blue-700);}
+.nav-links a.active{background:var(--blue-700);color:#fff;}
+.nav-actions{display:flex;align-items:center;gap:10px;}
+.search-wrap{position:relative;}
+.search-toggle{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--ink-700);background:var(--blue-50);transition:background .2s;}
+.search-toggle:hover{background:var(--blue-100);}
+.search-panel{position:absolute;top:54px;right:0;width:320px;background:#fff;border-radius:16px;box-shadow:var(--shadow-lg);border:1px solid var(--line);padding:16px;display:none;z-index:50;}
+.search-panel.open{display:block;}
+.search-panel input{width:100%;padding:11px 14px;border:1.5px solid var(--line);border-radius:10px;font-size:14px;outline:none;}
+.search-panel input:focus{border-color:var(--blue-600);}
+.search-results{margin-top:10px;max-height:260px;overflow-y:auto;}
+.search-results a{display:flex;flex-direction:column;padding:9px 10px;border-radius:8px;font-size:13.5px;}
+.search-results a:hover{background:var(--blue-50);}
+.search-results .r-cat{font-size:10.5px;color:var(--green-600);font-family:var(--ff-mono);text-transform:uppercase;letter-spacing:.06em;}
+.search-empty{font-size:13px;color:var(--ink-500);padding:10px 4px;}
+.hamburger{display:none;width:42px;height:42px;border-radius:50%;background:var(--blue-50);align-items:center;justify-content:center;color:var(--ink-900);}
+@media (max-width:980px){
+  .nav-links{display:none;}
+  .hamburger{display:flex;}
+}
+.mobile-menu{display:none;flex-direction:column;background:#fff;border-top:1px solid var(--line);padding:10px 24px 20px;}
+.mobile-menu.open{display:flex;}
+.mobile-menu a{padding:13px 4px;border-bottom:1px solid var(--line);font-weight:500;}
+.mobile-menu a.active{color:var(--blue-700);font-weight:700;}
+
+/* ============ HERO ============ */
+.hero{position:relative;background:linear-gradient(180deg,var(--blue-50) 0%, #fff 78%);overflow:hidden;padding:72px 0 40px;}
+.hero .container{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;}
+@media (max-width:980px){.hero .container{grid-template-columns:1fr;}}
+.hero-copy h1{font-size:clamp(34px,4.6vw,58px);margin-top:16px;}
+.hero-copy h1 em{font-style:normal;color:var(--blue-700);position:relative;}
+.hero-copy p.lead{margin-top:20px;font-size:17.5px;color:var(--ink-500);max-width:520px;}
+.hero-actions{display:flex;gap:14px;margin-top:32px;flex-wrap:wrap;}
+.hero-badges{display:flex;gap:28px;margin-top:44px;flex-wrap:wrap;}
+.hero-badge{display:flex;align-items:center;gap:10px;}
+.hero-badge .num{font-family:var(--ff-display);font-size:22px;font-weight:700;color:var(--ink-900);}
+.hero-badge .lbl{font-size:12.5px;color:var(--ink-500);}
+.hero-badge svg{color:var(--green-600);width:22px;height:22px;}
+
+.hero-visual{position:relative;height:520px;}
+.hv-card{position:absolute;border-radius:var(--radius-lg);box-shadow:var(--shadow-lg);}
+.hv-main{inset:0 0 60px 40px;background:linear-gradient(150deg,var(--blue-700) 0%,var(--blue-900) 100%);overflow:hidden;display:flex;align-items:flex-end;padding:26px;}
+.hv-main::before{content:'';position:absolute;inset:0;background:
+  radial-gradient(circle at 30% 20%, rgba(255,255,255,.18), transparent 40%),
+  radial-gradient(circle at 80% 80%, rgba(27,181,135,.35), transparent 45%);}
+.hv-main .hv-cross{position:absolute;top:30px;right:30px;width:64px;height:64px;opacity:.15;}
+.hv-pulse{width:100%;position:relative;z-index:1;}
+.hv-pulse svg{width:100%;height:70px;}
+.hv-pulse-path{stroke-dasharray:600;stroke-dashoffset:600;animation:draw 3.2s ease-in-out infinite;}
+@keyframes draw{0%{stroke-dashoffset:600;}55%{stroke-dashoffset:0;}100%{stroke-dashoffset:-600;}}
+.hv-float{position:absolute;background:#fff;border-radius:16px;padding:14px 16px;display:flex;align-items:center;gap:12px;box-shadow:var(--shadow-md);}
+.hv-float-1{top:20px;left:0;animation:floaty 5s ease-in-out infinite;}
+.hv-float-2{bottom:30px;right:0;animation:floaty 5s ease-in-out infinite 1s;}
+@keyframes floaty{0%,100%{transform:translateY(0);}50%{transform:translateY(-10px);}}
+.hv-float .fi{width:38px;height:38px;border-radius:11px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.hv-float-1 .fi{background:var(--green-100);color:var(--green-600);}
+.hv-float-2 .fi{background:var(--blue-100);color:var(--blue-700);}
+.hv-float .ft-title{font-weight:700;font-size:14px;color:var(--ink-900);}
+.hv-float .ft-sub{font-size:11.5px;color:var(--ink-500);}
+@media (max-width:980px){.hero-visual{height:400px;}.hv-main{inset:0 0 40px 20px;}}
+@media (max-width:520px){.hero-visual{height:340px;}.hv-float{padding:10px 12px;}.hv-float .ft-title{font-size:12.5px;}.hv-float .ft-sub{font-size:10px;}}
+
+/* pulse divider */
+.pulse-divider{padding:0;height:60px;position:relative;}
+.pulse-divider svg{width:100%;height:100%;}
+.pulse-divider path{stroke-dasharray:1400;stroke-dashoffset:1400;transition:stroke-dashoffset 1.4s ease;}
+.pulse-divider.in-view path{stroke-dashoffset:0;}
+
+/* ============ WELCOME ============ */
+.welcome .container{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:center;}
+@media (max-width:900px){.welcome .container{grid-template-columns:1fr;}}
+.welcome-art{position:relative;border-radius:var(--radius-lg);overflow:hidden;aspect-ratio:4/5;background:linear-gradient(160deg,var(--blue-100),var(--green-100));display:flex;align-items:center;justify-content:center;}
+.welcome-art svg{width:46%;color:var(--blue-700);opacity:.85;}
+.welcome-stat-tag{position:absolute;bottom:22px;left:22px;background:#fff;border-radius:14px;padding:14px 18px;box-shadow:var(--shadow-md);}
+.welcome-stat-tag .n{font-family:var(--ff-display);font-size:26px;font-weight:700;color:var(--green-600);}
+.welcome-stat-tag .l{font-size:12px;color:var(--ink-500);}
+.welcome-points{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:28px;}
+.wp-item{display:flex;gap:12px;}
+.wp-item .wi{width:40px;height:40px;border-radius:11px;background:var(--blue-100);color:var(--blue-700);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.wp-item h4{font-size:15px;font-family:var(--ff-body);font-weight:700;color:var(--ink-900);}
+.wp-item p{font-size:13.5px;color:var(--ink-500);margin-top:2px;}
+
+/* ============ WHY CHOOSE US ============ */
+.why{background:var(--blue-900);color:#fff;position:relative;overflow:hidden;}
+.why::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 85% 10%,rgba(27,181,135,.25),transparent 45%);}
+.why .section-head p{color:#a9c2da;}
+.why .eyebrow{color:var(--green-500);}
+.why .section-head h2{color:#fff;}
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;position:relative;}
+@media (max-width:980px){.why-grid{grid-template-columns:repeat(2,1fr);}}
+@media (max-width:560px){.why-grid{grid-template-columns:1fr;}}
+.why-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius-md);padding:28px 24px;transition:transform .3s,background .3s;}
+.why-card:hover{transform:translateY(-6px);background:rgba(255,255,255,.09);}
+.why-card .wc-icon{width:52px;height:52px;border-radius:14px;background:linear-gradient(145deg,var(--green-500),var(--green-600));display:flex;align-items:center;justify-content:center;margin-bottom:18px;}
+.why-card .wc-icon svg{width:26px;height:26px;color:#fff;}
+.why-card h3{color:#fff;font-size:18px;}
+.why-card p{color:#a9c2da;font-size:14px;margin-top:8px;}
+
+/* ============ CARDS GRIDS (departments/services/lab) ============ */
+.card-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;}
+@media (max-width:1080px){.card-grid{grid-template-columns:repeat(2,1fr);}}
+@media (max-width:560px){.card-grid{grid-template-columns:1fr;}}
+.dept-card{border:1px solid var(--line);border-radius:var(--radius-md);padding:28px 24px;transition:box-shadow .3s,transform .3s,border-color .3s;background:#fff;}
+.dept-card:hover{box-shadow:var(--shadow-md);transform:translateY(-5px);border-color:transparent;}
+.dept-card .dc-icon{width:56px;height:56px;border-radius:16px;background:var(--blue-100);color:var(--blue-700);display:flex;align-items:center;justify-content:center;margin-bottom:18px;transition:background .3s,color .3s;}
+.dept-card:hover .dc-icon{background:var(--blue-700);color:#fff;}
+.dept-card .dc-icon svg{width:27px;height:27px;}
+.dept-card h3{font-size:18px;}
+.dept-card p{font-size:14px;color:var(--ink-500);margin-top:8px;}
+.dept-card .dc-link{margin-top:14px;display:inline-flex;align-items:center;gap:6px;font-size:13.5px;font-weight:700;color:var(--blue-700);}
+.section-foot{text-align:center;margin-top:44px;}
+
+/* ============ DOCTORS ============ */
+.doctor-card{border:1px solid var(--line);border-radius:var(--radius-md);overflow:hidden;background:#fff;transition:box-shadow .3s,transform .3s;}
+.doctor-card:hover{box-shadow:var(--shadow-md);transform:translateY(-5px);}
+.doc-avatar{position:relative;aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;font-family:var(--ff-display);font-weight:700;font-size:44px;color:#fff;}
+.doc-body{padding:20px 22px 24px;}
+.doc-body h3{font-size:17px;}
+.doc-body .spec{color:var(--green-600);font-size:13px;font-weight:600;margin-top:3px;}
+.doc-body .meta{display:flex;gap:14px;margin-top:12px;font-size:12.5px;color:var(--ink-500);}
+.doc-body .meta span{display:flex;align-items:center;gap:5px;}
+.doc-actions{display:flex;gap:8px;margin-top:16px;}
+
+/* ============ SERVICES ============ */
+.svc-row{display:flex;gap:20px;padding:26px 0;border-bottom:1px solid var(--line);align-items:flex-start;}
+.svc-row .si{width:52px;height:52px;border-radius:14px;background:var(--green-100);color:var(--green-600);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.svc-row h3{font-size:17.5px;}
+.svc-row p{font-size:14px;color:var(--ink-500);margin-top:5px;max-width:640px;}
+
+/* ============ EMERGENCY BANNER ============ */
+.emergency{background:linear-gradient(120deg,#B5352E,#8E241F);border-radius:var(--radius-lg);color:#fff;padding:44px 40px;display:flex;align-items:center;justify-content:space-between;gap:28px;flex-wrap:wrap;position:relative;overflow:hidden;}
+.emergency::after{content:'';position:absolute;inset:0;background:radial-gradient(circle at 90% 10%,rgba(255,255,255,.15),transparent 50%);}
+.emergency .em-left{display:flex;align-items:center;gap:20px;position:relative;}
+.emergency .em-icon{width:64px;height:64px;border-radius:18px;background:rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.emergency .em-icon svg{width:32px;height:32px;}
+.emergency h3{color:#fff;font-size:24px;}
+.emergency p{color:#ffd9d6;margin-top:4px;font-size:14.5px;}
+.emergency .em-right{position:relative;display:flex;gap:12px;flex-wrap:wrap;}
+.btn-emergency{background:#fff;color:#B5352E;}
+.btn-emergency:hover{background:#fff0ef;}
+
+/* ============ STATS ============ */
+.stats{background:var(--blue-50);}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center;}
+@media (max-width:768px){.stats-grid{grid-template-columns:1fr 1fr;}}
+.stat-item .s-num{font-family:var(--ff-display);font-size:clamp(32px,4vw,48px);font-weight:700;color:var(--blue-700);}
+.stat-item .s-lbl{font-size:14px;color:var(--ink-500);margin-top:6px;}
+
+/* ============ TESTIMONIALS ============ */
+.testi-wrap{position:relative;max-width:760px;margin:0 auto;}
+.testi-slide{display:none;text-align:center;}
+.testi-slide.active{display:block;animation:fadeUp .5s ease;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:translateY(0);}}
+.testi-stars{color:var(--gold-500);display:flex;justify-content:center;gap:4px;margin-bottom:18px;}
+.testi-slide p.quote{font-family:var(--ff-display);font-size:clamp(19px,2.4vw,25px);color:var(--ink-900);line-height:1.5;}
+.testi-person{display:flex;align-items:center;justify-content:center;gap:12px;margin-top:26px;}
+.testi-avatar{width:48px;height:48px;border-radius:50%;background:var(--blue-700);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-family:var(--ff-display);}
+.testi-person .tn{font-weight:700;font-size:14.5px;color:var(--ink-900);text-align:left;}
+.testi-person .tl{font-size:12.5px;color:var(--ink-500);text-align:left;}
+.testi-dots{display:flex;justify-content:center;gap:8px;margin-top:32px;}
+.testi-dots button{width:9px;height:9px;border-radius:50%;background:var(--line);transition:background .3s,width .3s;}
+.testi-dots button.active{background:var(--blue-700);width:24px;border-radius:6px;}
+
+/* ============ GALLERY ============ */
+.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+@media (max-width:900px){.gallery-grid{grid-template-columns:repeat(2,1fr);}}
+.g-tile{position:relative;border-radius:var(--radius-md);overflow:hidden;aspect-ratio:1/1;display:flex;align-items:flex-end;padding:16px;}
+.g-tile .g-label{position:relative;color:#fff;font-weight:700;font-size:14.5px;z-index:1;}
+.g-tile::before{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(6,47,82,.75),transparent 55%);z-index:0;}
+.g-tile svg{position:absolute;top:16px;left:16px;width:26px;height:26px;color:rgba(255,255,255,.85);z-index:1;}
+.g-tile:hover{outline:3px solid var(--green-500);outline-offset:-3px;}
+
+/* ============ CONTACT ============ */
+.contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:48px;}
+@media (max-width:900px){.contact-grid{grid-template-columns:1fr;}}
+.contact-info-card{background:var(--blue-900);color:#fff;border-radius:var(--radius-lg);padding:36px 32px;}
+.contact-info-card h3{color:#fff;font-size:21px;}
+.ci-row{display:flex;gap:14px;margin-top:22px;}
+.ci-row .ci-icon{width:42px;height:42px;border-radius:12px;background:rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--green-500);}
+.ci-row .ci-label{font-size:12px;color:#a9c2da;}
+.ci-row .ci-value{font-weight:600;font-size:14.5px;margin-top:2px;}
+.ci-socials{display:flex;gap:10px;margin-top:26px;}
+.ci-socials a{width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;transition:background .2s;}
+.ci-socials a:hover{background:rgba(255,255,255,.22);}
+
+.form-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);padding:32px;box-shadow:var(--shadow-sm);}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+@media (max-width:560px){.form-grid{grid-template-columns:1fr;}}
+.field{display:flex;flex-direction:column;gap:6px;margin-bottom:16px;}
+.field label{font-size:13px;font-weight:600;color:var(--ink-700);}
+.field input,.field select,.field textarea{padding:12px 14px;border:1.5px solid var(--line);border-radius:10px;font-size:14.5px;outline:none;transition:border-color .2s;color:var(--ink-900);}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--blue-600);}
+.map-frame{border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--line);margin-top:28px;height:340px;}
+.map-frame iframe{width:100%;height:100%;border:0;}
+
+/* ============ FAQ ============ */
+.faq-item{border-bottom:1px solid var(--line);}
+.faq-q{display:flex;align-items:center;justify-content:space-between;padding:22px 4px;cursor:pointer;gap:20px;}
+.faq-q h4{font-size:16px;font-family:var(--ff-body);font-weight:600;color:var(--ink-900);}
+.faq-q .fq-plus{width:26px;height:26px;border-radius:50%;background:var(--blue-100);color:var(--blue-700);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:transform .3s;}
+.faq-item.open .fq-plus{transform:rotate(45deg);background:var(--blue-700);color:#fff;}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease;}
+.faq-item.open .faq-a{max-height:200px;}
+.faq-a p{padding:0 4px 22px;color:var(--ink-500);font-size:14.5px;max-width:640px;}
+
+/* ============ PAGE HEADER (inner pages) ============ */
+.page-header{background:linear-gradient(180deg,var(--blue-50),#fff);padding:56px 0 40px;border-bottom:1px solid var(--line);}
+.page-header .crumb{font-size:13px;color:var(--ink-500);}
+.page-header .crumb a{color:var(--blue-700);font-weight:600;}
+.page-header h1{font-size:clamp(30px,4vw,44px);margin-top:10px;}
+.page-header p{color:var(--ink-500);margin-top:10px;max-width:600px;}
+
+/* ============ FOOTER ============ */
+footer{background:var(--ink-900);color:#b7c3d4;padding-top:72px;}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:40px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,.08);}
+@media (max-width:900px){.footer-grid{grid-template-columns:1fr 1fr;}}
+@media (max-width:560px){.footer-grid{grid-template-columns:1fr;}}
+.footer-grid h4{color:#fff;font-family:var(--ff-body);font-size:15px;margin-bottom:18px;}
+.footer-grid li{margin-bottom:11px;font-size:14px;}
+.footer-grid a:hover{color:#fff;}
+.footer-brand{display:flex;align-items:center;gap:12px;margin-bottom:16px;}
+.footer-brand .name{font-family:var(--ff-display);font-weight:700;color:#fff;font-size:19px;}
+.footer-desc{font-size:14px;max-width:280px;color:#93a2b8;}
+.footer-socials{display:flex;gap:10px;margin-top:20px;}
+.footer-socials a{width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;}
+.footer-socials a:hover{background:var(--blue-700);}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;padding:22px 0;font-size:13px;flex-wrap:wrap;gap:10px;color:#7c8aa0;}
+.demo-banner{background:var(--gold-500);color:#3a2600;text-align:center;font-size:12.5px;font-weight:600;padding:8px 16px;}
+.demo-banner b{font-weight:800;}
+
+/* Floating action buttons */
+.fab-stack{position:fixed;right:20px;bottom:20px;display:flex;flex-direction:column;gap:12px;z-index:90;}
+.fab{width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-lg);color:#fff;}
+.fab-call{background:var(--green-600);}
+.fab-book{background:var(--blue-700);}
+.fab svg{width:24px;height:24px;}
+
+/* Modal */
+.modal-overlay{position:fixed;inset:0;background:rgba(6,15,26,.6);display:none;align-items:center;justify-content:center;z-index:200;padding:20px;}
+.modal-overlay.open{display:flex;}
+.modal-box{background:#fff;border-radius:var(--radius-lg);max-width:480px;width:100%;padding:32px;position:relative;max-height:90vh;overflow-y:auto;}
+.modal-close{position:absolute;top:18px;right:18px;width:34px;height:34px;border-radius:50%;background:var(--blue-50);display:flex;align-items:center;justify-content:center;}
+.modal-box h3{font-size:22px;}
+.modal-box p.sub{color:var(--ink-500);font-size:14px;margin-top:6px;margin-bottom:22px;}
+.toast{position:fixed;bottom:26px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--ink-900);color:#fff;padding:14px 22px;border-radius:12px;font-size:14px;opacity:0;pointer-events:none;transition:all .3s ease;z-index:300;display:flex;align-items:center;gap:10px;box-shadow:var(--shadow-lg);}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
+.toast svg{color:var(--green-500);}
+
+/* page visibility */
+.page{display:none;}
+.page.active{display:block;}
+[data-reveal]{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease;}
+[data-reveal].in{opacity:1;transform:translateY(0);}
+
+.two-col-info{display:grid;grid-template-columns:1fr 1fr;gap:40px;}
+@media (max-width:800px){.two-col-info{grid-template-columns:1fr;}}
+.mission-card{border:1px solid var(--line);border-radius:var(--radius-md);padding:28px;}
+.mission-card .mi{width:48px;height:48px;border-radius:13px;background:var(--green-100);color:var(--green-600);display:flex;align-items:center;justify-content:center;margin-bottom:16px;}
+.timeline{border-left:2px solid var(--line);padding-left:28px;margin-top:8px;}
+.tl-item{position:relative;padding-bottom:34px;}
+.tl-item::before{content:'';position:absolute;left:-34px;top:2px;width:14px;height:14px;border-radius:50%;background:var(--blue-700);border:3px solid var(--blue-100);}
+.tl-item .yr{font-family:var(--ff-mono);color:var(--blue-700);font-size:13px;font-weight:600;}
+.tl-item h4{margin-top:4px;font-size:16px;}
+.tl-item p{font-size:13.5px;color:var(--ink-500);margin-top:4px;}
+
+.value-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+@media (max-width:768px){.value-grid{grid-template-columns:1fr;}}
+
+.lab-cats{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:34px;}
+.lab-cat-btn{padding:10px 18px;border-radius:100px;border:1.5px solid var(--line);font-size:13.5px;font-weight:600;color:var(--ink-700);transition:all .2s;}
+.lab-cat-btn.active,.lab-cat-btn:hover{background:var(--blue-700);color:#fff;border-color:var(--blue-700);}
+.lab-table{width:100%;border-collapse:collapse;}
+.lab-table th{text-align:left;font-family:var(--ff-mono);font-size:11.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-500);padding:12px 14px;border-bottom:2px solid var(--line);}
+.lab-table td{padding:16px 14px;border-bottom:1px solid var(--line);font-size:14.5px;}
+.lab-table tr td:first-child{font-weight:600;color:var(--ink-900);}
+.lab-badge{display:inline-flex;font-size:11.5px;font-weight:700;padding:4px 10px;border-radius:100px;background:var(--green-100);color:var(--green-600);}
+
+.dept-detail-card{display:grid;grid-template-columns:auto 1fr auto;gap:20px;align-items:center;padding:26px;border:1px solid var(--line);border-radius:var(--radius-md);margin-bottom:16px;}
+@media (max-width:700px){.dept-detail-card{grid-template-columns:1fr;text-align:left;}}
+.dept-detail-card .dd-icon{width:64px;height:64px;border-radius:16px;background:var(--blue-100);color:var(--blue-700);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.dept-detail-card .dd-icon svg{width:30px;height:30px;}
+.dept-detail-card h3{font-size:18px;}
+.dept-detail-card p{font-size:14px;color:var(--ink-500);margin-top:4px;}
+.dept-detail-card .dd-tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px;}
+.dept-detail-card .dd-tags span{font-size:11.5px;background:var(--green-100);color:var(--green-600);padding:4px 10px;border-radius:100px;font-weight:600;}
+
+.about-hero{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;}
+@media (max-width:900px){.about-hero{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+
+<div class="demo-banner">⚠ <b>DEMONSTRATION WEBSITE</b> — Sample content shown for design preview only. All names, images, and details below are placeholders to be replaced with real Om Aasha Hospital information.</div>
+
+<!-- ============ TOP BAR ============ -->
+<div class="topbar">
+  <div class="container">
+    <div class="topbar-left">
+      <a href="tel:+97791526649">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        +977 91-526649
+      </a>
+      <a href="#" onclick="return false;">
+        <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        Open 24 Hours
+      </a>
+      <a href="#" onclick="return false;">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M12 21c-4.4-4-7-7.5-7-11a7 7 0 0 1 14 0c0 3.5-2.6 7-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+        Chowk Campus Road, Dhangadhi
+      </a>
+    </div>
+    <div class="topbar-right">
+      <div class="rating-chip">
+        <svg class="icon" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        4.7/5 <span style="color:#a9c2da;font-weight:400;">· APHIN Affiliated</span>
+      </div>
+      <a class="fb-btn" href="https://www.facebook.com/omasha.hospital?mibextid=ZbWKwL" target="_blank" rel="noopener" aria-label="Facebook">
+        <svg class="icon" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ============ NAVBAR ============ -->
+<header class="navbar">
+  <div class="container">
+    <a href="#home" class="brand" onclick="go('home')">
+      <div class="brand-mark">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 21s-7.5-4.6-10-9.5C.4 7.6 2.6 4 6.3 4c2 0 3.6 1.1 4.7 2.7C12.1 5.1 13.7 4 15.7 4c3.7 0 5.9 3.6 4.3 7.5C17.5 16.4 12 21 12 21z"/><path d="M9 12h1.5l1-2.5 2 5L14.5 12H16"/></svg>
+      </div>
+      <div class="brand-text">
+        <div class="name">Om Aasha Hospital</div>
+        <div class="sub">Pvt. Ltd. · Dhangadhi</div>
+      </div>
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#home" onclick="go('home')" data-nav="home">Home</a>
+      <a href="#about" onclick="go('about')" data-nav="about">About</a>
+      <a href="#departments" onclick="go('departments')" data-nav="departments">Departments</a>
+      <a href="#doctors" onclick="go('doctors')" data-nav="doctors">Doctors</a>
+      <a href="#services" onclick="go('services')" data-nav="services">Services</a>
+      <a href="#laboratory" onclick="go('laboratory')" data-nav="laboratory">Laboratory</a>
+      <a href="#gallery" onclick="go('gallery')" data-nav="gallery">Gallery</a>
+      <a href="#contact" onclick="go('contact')" data-nav="contact">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+      <div class="search-wrap">
+        <button class="search-toggle" onclick="toggleSearch()" aria-label="Search">
+          <svg class="icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        </button>
+        <div class="search-panel" id="searchPanel">
+          <input type="text" id="searchInput" placeholder="Search doctors, departments, services…" oninput="runSearch(this.value)">
+          <div class="search-results" id="searchResults"></div>
+        </div>
+      </div>
+      <a class="btn btn-primary btn-sm" href="#" onclick="openModal();return false;">Book Appointment</a>
+      <button class="hamburger" onclick="toggleMobile()" aria-label="Menu">
+        <svg class="icon" viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#home" onclick="go('home')" data-nav="home">Home</a>
+    <a href="#about" onclick="go('about')" data-nav="about">About</a>
+    <a href="#departments" onclick="go('departments')" data-nav="departments">Departments</a>
+    <a href="#doctors" onclick="go('doctors')" data-nav="doctors">Doctors</a>
+    <a href="#services" onclick="go('services')" data-nav="services">Services</a>
+    <a href="#laboratory" onclick="go('laboratory')" data-nav="laboratory">Laboratory</a>
+    <a href="#gallery" onclick="go('gallery')" data-nav="gallery">Gallery</a>
+    <a href="#contact" onclick="go('contact')" data-nav="contact">Contact</a>
+  </div>
+</header>
+
+<main id="app">
+
+<!-- ============================================================ -->
+<!-- ============ PAGE: HOME ============ -->
+<!-- ============================================================ -->
+<section class="page active" id="page-home">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="container">
+      <div class="hero-copy" data-reveal>
+        <span class="pill">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-10-9.5C.4 7.6 2.6 4 6.3 4c2 0 3.6 1.1 4.7 2.7C12.1 5.1 13.7 4 15.7 4c3.7 0 5.9 3.6 4.3 7.5C17.5 16.4 12 21 12 21z"/></svg>
+          Multi-Specialty Care in Sudurpashchim
+        </span>
+        <h1>Compassionate care, <em>trusted</em> every day in Dhangadhi.</h1>
+        <p class="lead">Om Aasha Hospital Pvt. Ltd. brings modern diagnostics, expert specialists, and 24-hour emergency care to Kailali — built on a foundation of trust, precision, and genuine warmth.</p>
+        <div class="hero-actions">
+          <a href="#" class="btn btn-primary" onclick="openModal();return false;">
+            <svg class="icon" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            Book Appointment
+          </a>
+          <a href="tel:+97791526649" class="btn btn-ghost">
+            <svg class="icon" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Emergency: 91-526649
+          </a>
+        </div>
+        <div class="hero-badges">
+          <div class="hero-badge"><svg class="icon" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><div><div class="num">24 Hrs</div><div class="lbl">Emergency Service</div></div></div>
+          <div class="hero-badge"><svg class="icon" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><div><div class="num">APHIN</div><div class="lbl">Affiliated Hospital</div></div></div>
+          <div class="hero-badge"><svg class="icon" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><div><div class="num">4.7★</div><div class="lbl">Patient Rating</div></div></div>
+        </div>
+      </div>
+
+      <div class="hero-visual" data-reveal>
+        <div class="hv-card hv-main">
+          <svg class="hv-cross" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M13 2h-2v9H2v2h9v9h2v-9h9v-2h-9z"/></svg>
+          <div class="hv-pulse">
+            <svg viewBox="0 0 400 70" preserveAspectRatio="none">
+              <path class="hv-pulse-path" d="M0 35 H140 L160 10 L180 60 L200 20 L220 50 L240 35 H400" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity=".85"/>
+            </svg>
+          </div>
+        </div>
+        <div class="hv-float hv-float-1">
+          <div class="fi"><svg class="icon" viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+          <div><div class="ft-title">24/7 Emergency</div><div class="ft-sub">Rapid response team</div></div>
+        </div>
+        <div class="hv-float hv-float-2">
+          <div class="fi"><svg class="icon" viewBox="0 0 24 24"><path d="m9 12 2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></div>
+          <div><div class="ft-title">APHIN Certified</div><div class="ft-sub">Quality assured care</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pulse-divider" data-pulse><svg viewBox="0 0 1200 60" preserveAspectRatio="none"><path d="M0 30 H420 L450 5 L480 55 L510 15 L540 45 L570 30 H1200" fill="none" stroke="url(#pgrad)" stroke-width="2.5"/><defs><linearGradient id="pgrad" x1="0" x2="1"><stop offset="0" stop-color="#0A5FA8"/><stop offset="1" stop-color="#1BB587"/></linearGradient></defs></svg></div>
+
+  <!-- WELCOME -->
+  <section class="welcome">
+    <div class="container">
+      <div class="welcome-art" data-reveal>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 21s-7.5-4.6-10-9.5C.4 7.6 2.6 4 6.3 4c2 0 3.6 1.1 4.7 2.7C12.1 5.1 13.7 4 15.7 4c3.7 0 5.9 3.6 4.3 7.5C17.5 16.4 12 21 12 21z"/><path d="M8 12h2l1.3-3 2.4 6L15 12h1.5"/></svg>
+        <div class="welcome-stat-tag"><div class="n">10+</div><div class="l">Years serving Kailali</div></div>
+      </div>
+      <div data-reveal>
+        <span class="eyebrow">Welcome to Om Aasha Hospital</span>
+        <h2 style="margin-top:12px;">Modern medicine with a personal touch, right here in Dhangadhi.</h2>
+        <p style="color:var(--ink-500);margin-top:16px;font-size:16px;">Since opening our doors, Om Aasha Hospital Pvt. Ltd. has grown into a trusted multi-specialty centre for families across Kailali and the wider Sudurpashchim Province — combining qualified specialists, modern diagnostic equipment, and a genuinely caring environment for every patient who walks through our doors.</p>
+        <div class="welcome-points">
+          <div class="wp-item"><div class="wi"><svg class="icon" viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-10-9.5C.4 7.6 2.6 4 6.3 4c2 0 3.6 1.1 4.7 2.7C12.1 5.1 13.7 4 15.7 4c3.7 0 5.9 3.6 4.3 7.5C17.5 16.4 12 21 12 21z"/></svg></div><div><h4>Patient-first culture</h4><p>Every visit is guided by empathy and clear communication.</p></div></div>
+          <div class="wp-item"><div class="wi"><svg class="icon" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h3"/></svg></div><div><h4>Modern diagnostics</h4><p>In-house lab, imaging, and pathology under one roof.</p></div></div>
+          <div class="wp-item"><div class="wi"><svg class="icon" viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div><div><h4>24-hour emergency</h4><p>A dedicated team ready around the clock, every day.</p></div></div>
+          <div class="wp-item"><div class="wi"><svg class="icon" viewBox="0 0 24 24"><circle cx="9" cy="7" r="4"/><path d="M2 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/><path d="M17 3.1a4 4 0 0 1 0 7.8"/><path d="M23 21v-2a4 4 0 0 0-3-3.9"/></svg></div><div><h4>Qualified specialists</h4><p>MD/MS-qualified doctors across major departments.</p></div></div>
+        </div>
+        <a href="#about" class="btn btn-primary" style="margin-top:32px;" onclick="go('about')">Learn More About Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section class="why">
+    <div class="container">
+      <div class="section-head center" data-reveal>
+        <span class="eyebrow">Why Choose Us</span>
+        <h2>Care built around you</h2>
+        <p>What sets Om Aasha Hospital apart for families across Sudurpashchim Province.</p>
+      </div>
+      <div class="why-grid" data-reveal>
+        <div class="why-card"><div class="wc-icon"><svg class="icon" viewBox="0 0 24 24" stroke="#fff"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div><h3>24/7 Emergency</h3><p>Round-the-clock emergency and ambulance response for critical care.</p></div>
+        <div class="why-card"><div class="wc-icon"><svg class="icon" viewBox="0 0 24 24" stroke="#fff"><circle cx="9" cy="7" r="4"/><path d="M2 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/><path d="M17 3.1a4 4 0 0 1 0 7.8"/><path d="M23 21v-2a4 4 0 0 0-3-3.9"/></svg></div><h3>Experienced Specialists</h3><p>MD/MS-qualified doctors across cardiology, ortho, gynae &amp; more.</p></div>
+        <div class="why-card"><div class="wc-icon"><svg class="icon" viewBox="0 0 24 24" stroke="#fff"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h3"/></svg></div><h3>Modern Diagnostics</h3><p>Advanced laboratory, imaging &amp; pathology equipment on-site.</p></div>
+        <div class="why-card"><div class="wc-icon"><svg class="icon" viewBox="0 0 24 24" stroke="#fff"><path d="m9 12 2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></div><h3>APHIN Affiliated</h3><p>Certified quality standards recognised by the Association of Private Health Institutions Nepal.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED DEPARTMENTS -->
+  <section class="departments">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <span class="eyebrow">Featured Departments</span>
+        <h2>Specialized care, close to home</h2>
+        <p>Eight core departments covering the everyday and emergency health needs of the community.</p>
+      </div>
+      <div class="card-grid" id="deptGridHome" data-reveal></div>
+      <div class="section-foot"><a href="#departments" class="btn btn-ghost" onclick="go('departments')">View All Departments</a></div>
+    </div>
+  </section>
+
+  <!-- EXPERT DOCTORS -->
+  <section class="doctors" style="background:var(--blue-50);">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <span class="eyebrow">Expert Doctors</span>
+        <h2>Meet a few of our specialists</h2>
+        <p>Qualified, approachable, and dedicated to your family's wellbeing.</p>
+      </div>
+      <div class="card-grid" id="docGridHome" data-reveal></div>
+      <div class="section-foot"><a href="#doctors" class="btn btn-ghost" onclick="go('doctors')">View All Doctors</a></div>
+    </div>
+  </section>
+
+  <!-- LABORATORY & DIAGNOSTICS -->
+  <section class="lab-preview">
+    <div class="container two-col-info">
+      <div data-reveal>
+        <span class="eyebrow">Laboratory &amp; Diagnostics</span>
+        <h2 style="margin-top:12px;">Accurate results, fast turnaround.</h2>
+        <p style="color:var(--ink-500);margin-top:14px;font-size:16px;">Our in-house laboratory and imaging centre run routine and specialised diagnostics daily — from blood work to ultrasound — with digital reports and same-day results for most common tests.</p>
+        <div class="welcome-points" style="grid-template-columns:1fr;margin-top:26px;">
+          <div class="wp-item"><div class="wi"><svg class="icon" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></div><div><h4>Same-day reports</h4><p>Most routine blood &amp; urine tests completed within hours.</p></div></div>
+          <div class="wp-item"><div class="wi"><svg class="icon" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></div><div><h4>Digital imaging</h4><p>X-Ray, ultrasound and ECG with digital reporting.</p></div></div>
+          <div class="wp-item"><div class="wi"><svg class="icon" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></div><div><h4>Health check packages</h4><p>Affordable bundled packages for routine screening.</p></div></div>
+        </div>
+        <a href="#laboratory" class="btn btn-accent" style="margin-top:28px;" onclick="go('laboratory')">Explore Laboratory Services</a>
+      </div>
+      <div class="welcome-art" data-reveal style="background:linear-gradient(160deg,var(--green-100),var(--blue-100));">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" style="color:var(--green-600);"><path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 2 3h10a2 2 0 0 0 2-3l-5-9V3"/><path d="M8.5 14h7"/></svg>
+        <div class="welcome-stat-tag"><div class="n">30+</div><div class="l">Diagnostic tests available</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EMERGENCY -->
+  <section style="padding-top:0;">
+    <div class="container">
+      <div class="emergency" data-reveal>
+        <div class="em-left">
+          <div class="em-icon"><svg class="icon" viewBox="0 0 24 24" stroke="#fff"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+          <div>
+            <h3>Medical Emergency? We're here, 24/7.</h3>
+            <p>Immediate ambulance dispatch &amp; emergency room care, every day of the year.</p>
+          </div>
+        </div>
+        <div class="em-right">
+          <a href="tel:+97791526649" class="btn btn-emergency"><svg class="icon" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Call Emergency Line</a>
+          <a href="#contact" class="btn btn-outline-white" onclick="go('contact')">Get Directions</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials">
+    <div class="container">
+      <div class="section-head center" data-reveal>
+        <span class="eyebrow">Patient Testimonials</span>
+        <h2>Stories from our patients</h2>
+        <p>Demo testimonials — replace with real patient feedback and consent.</p>
+      </div>
+      <div class="testi-wrap" data-reveal>
+        <div id="testiTrack"></div>
+        <div class="testi-dots" id="testiDots"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item"><div class="s-num" data-count="10">0</div><div class="s-lbl">Years of Service</div></div>
+        <div class="stat-item"><div class="s-num" data-count="25000">0</div><div class="s-lbl">Patients Treated</div></div>
+        <div class="stat-item"><div class="s-num" data-count="20">0</div><div class="s-lbl">Expert Doctors</div></div>
+        <div class="stat-item"><div class="s-num" data-count="50">0</div><div class="s-lbl">Hospital Beds</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY PREVIEW -->
+  <section class="gallery-preview">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <span class="eyebrow">Gallery</span>
+        <h2>A look inside Om Aasha Hospital</h2>
+        <p>Demo placeholders — to be replaced with real photography of the facility.</p>
+      </div>
+      <div class="gallery-grid" id="galleryPreviewGrid" data-reveal></div>
+      <div class="section-foot"><a href="#gallery" class="btn btn-ghost" onclick="go('gallery')">View Full Gallery</a></div>
+    </div>
+  </section>
+
+  <!-- CONTACT + MAP -->
+  <section class="contact-home" style="background:var(--blue-50);">
+    <div class="container">
+      <div class="section-head center" data-reveal>
+        <span class="eyebrow">Visit Us</span>
+        <h2>Find Om Aasha Hospital</h2>
+        <p>Chowk Campus Road, Ward No. 8, Dhangadhi, Kailali, Nepal</p>
+      </div>
+      <div class="map-frame" data-reveal>
+        <iframe src="https://www.google.com/maps?q=Dhangadhi,Kailali,Nepal&output=embed" loading="lazy" allowfullscreen title="Om Aasha Hospital Location Map"></iframe>
+      </div>
+      <div class="section-foot"><a href="#contact" class="btn btn-primary" onclick="go('contact')">Get Full Contact Details</a></div>
+    </div>
+  </section>
+
+</section>
+
+<!-- ============================================================ -->
+<!-- ============ PAGE: ABOUT ============ -->
+<!-- ============================================================ -->
+<section class="page" id="page-about">
+  <div class="page-header">
+    <div class="container">
+      <div class="crumb"><a href="#home" onclick="go('home')">Home</a> / About</div>
+      <h1>About Om Aasha Hospital</h1>
+      <p>A trusted multi-specialty hospital dedicated to the health and wellbeing of Dhangadhi and greater Kailali.</p>
+    </div>
+  </div>
+
+  <section>
+    <div class="container about-hero">
+      <div data-reveal>
+        <span class="eyebrow">Our Story</span>
+        <h2 style="margin-top:12px;">Built to bring quality healthcare closer to home.</h2>
+        <p style="color:var(--ink-500);margin-top:16px;font-size:16px;">Om Aasha Hospital Pvt. Ltd. was founded with a simple purpose: to give the people of Dhangadhi and the wider Sudurpashchim Province access to reliable, modern, and compassionate healthcare without needing to travel far. Located on Chowk Campus Road, Ward No. 8, the hospital has grown into a multi-specialty centre offering emergency, inpatient, diagnostic, and outpatient services around the clock.</p>
+        <p style="color:var(--ink-500);margin-top:14px;font-size:16px;">Affiliated with APHIN (Association of Private Health Institutions Nepal) and rated 4.7/5 by patients, Om Aasha continues to invest in qualified specialists, modern equipment, and a warm patient experience.</p>
+        <div style="margin-top:26px;"><span class="pill">Demo content — replace with real hospital history</span></div>
+      </div>
+      <div class="welcome-art" data-reveal>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="3" y="7" width="18" height="14" rx="2"/><path d="M3 11h18"/><path d="M8 7V4h8v3"/><path d="M12 14v4M10 16h4"/></svg>
+        <div class="welcome-stat-tag"><div class="n">2015</div><div class="l">Serving Dhangadhi since</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--blue-50);">
+    <div class="container two-col-info">
+      <div class="mission-card" data-reveal style="background:#fff;">
+        <div class="mi"><svg class="icon" viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-10-9.5C.4 7.6 2.6 4 6.3 4c2 0 3.6 1.1 4.7 2.7C12.1 5.1 13.7 4 15.7 4c3.7 0 5.9 3.6 4.3 7.5C17.5 16.4 12 21 12 21z"/></svg></div>
+        <h3>Our Mission</h3>
+        <p style="color:var(--ink-500);margin-top:10px;font-size:15px;">To provide accessible, ethical, and high-quality healthcare to every patient who walks through our doors — regardless of background — while continuously improving our clinical standards.</p>
+      </div>
+      <div class="mission-card" data-reveal style="background:#fff;">
+        <div class="mi"><svg class="icon" viewBox="0 0 24 24"><path d="M12 2 3 7v6c0 5 4 9 9 9s9-4 9-9V7l-9-5z"/></svg></div>
+        <h3>Our Vision</h3>
+        <p style="color:var(--ink-500);margin-top:10px;font-size:15px;">To be the most trusted multi-specialty hospital in Sudurpashchim Province, recognised for clinical excellence and genuine patient care.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-head center" data-reveal>
+        <span class="eyebrow">Our Values</span>
+        <h2>What guides us every day</h2>
+      </div>
+      <div class="value-grid" data-reveal>
+        <div class="why-card" style="border:1px solid var(--line);background:#fff;"><div class="wc-icon" style="background:linear-gradient(145deg,var(--blue-600),var(--blue-900));"><svg class="icon" viewBox="0 0 24 24" stroke="#fff"><path d="M12 21s-7.5-4.6-10-9.5C.4 7.6 2.6 4 6.3 4c2 0 3.6 1.1 4.7 2.7C12.1 5.1 13.7 4 15.7 4c3.7 0 5.9 3.6 4.3 7.5C17.5 16.4 12 21 12 21z"/></svg></div><h3 style="color:var(--ink-900);">Compassion</h3><p style="color:var(--ink-500);">Treating every patient with dignity, empathy and respect.</p></div>
+        <div class="why-card" style="border:1px solid var(--line);background:#fff;"><div class="wc-icon" style="background:linear-gradient(145deg,var(--blue-600),var(--blue-900));"><svg class="icon" viewBox="0 0 24 24" stroke="#fff"><path d="m9 12 2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></div><h3 style="color:var(--ink-900);">Integrity</h3><p style="color:var(--ink-500);">Honest, transparent care and communication, always.</p></div>
+        <div class="why-card" style="border:1px solid var(--line);background:#fff;"><div class="wc-icon" style="background:linear-gradient(145deg,var(--blue-600),var(--blue-900));"><svg class="icon" viewBox="0 0 24 24" stroke="#fff"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/></svg></div><h3 style="color:var(--ink-900);">Excellence</h3><p style="color:var(--ink-500);">Continuous investment in skills, equipment and standards.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--blue-50);">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <span class="eyebrow">Our Journey</span>
+        <h2>Milestones (Demo Timeline)</h2>
+      </div>
+      <div class="timeline" data-reveal>
+        <div class="tl-item"><div class="yr">2015</div><h4>Hospital founded</h4><p>Om Aasha Hospital opens its doors on Chowk Campus Road, Dhangadhi.</p></div>
+        <div class="tl-item"><div class="yr">2018</div><h4>Laboratory &amp; imaging expansion</h4><p>In-house diagnostic lab and radiology unit introduced.</p></div>
+        <div class="tl-item"><div class="yr">2021</div><h4>APHIN affiliation</h4><p>Recognised by the Association of Private Health Institutions Nepal.</p></div>
+        <div class="tl-item"><div class="yr">2026</div><h4>20+ specialists, 50+ beds</h4><p>Continued growth serving families across Sudurpashchim Province.</p></div>
+      </div>
+    </div>
+  </section>
+</section>
+
+<!-- ============================================================ -->
+<!-- ============ PAGE: DEPARTMENTS ============ -->
+<!-- ============================================================ -->
+<section class="page" id="page-departments">
+  <div class="page-header">
+    <div class="container">
+      <div class="crumb"><a href="#home" onclick="go('home')">Home</a> / Departments</div>
+      <h1>Our Departments</h1>
+      <p>Eight specialised departments providing comprehensive care under one roof.</p>
+    </div>
+  </div>
+  <section>
+    <div class="container" id="deptDetailList"></div>
+  </section>
+</section>
+
+<!-- ============================================================ -->
+<!-- ============ PAGE: DOCTORS ============ -->
+<!-- ============================================================ -->
+<section class="page" id="page-doctors">
+  <div class="page-header">
+    <div class="container">
+      <div class="crumb"><a href="#home" onclick="go('home')">Home</a> / Doctors</div>
+      <h1>Our Expert Doctors</h1>
+      <p>Qualified specialists dedicated to accurate diagnosis and attentive care. Demo profiles shown below.</p>
+    </div>
+  </div>
+  <section>
+    <div class="container">
+      <div class="card-grid" id="docGridFull"></div>
+    </div>
+  </section>
+</section>
+
+<!-- ============================================================ -->
+<!-- ============ PAGE: SERVICES ============ -->
+<!-- ============================================================ -->
+<section class="page" id="page-services">
+  <div class="page-header">
+    <div class="container">
+      <div class="crumb"><a href="#home" onclick="go('home')">Home</a> / Services</div>
+      <h1>Our Services</h1>
+      <p>From emergency response to routine checkups — comprehensive services for the whole family.</p>
+    </div>
+  </div>
+  <section>
+    <div class="container" style="max-width:900px;">
+      <div id="svcList"></div>
+    </div>
+  </section>
+</section>
+
+<!-- ============================================================ -->
+<!-- ============ PAGE: LABORATORY ============ -->
+<!-- ============================================================ -->
+<section class="page" id="page-laboratory">
+  <div class="page-header">
+    <div class="container">
+      <div class="crumb"><a href="#home" onclick="go('home')">Home</a> / Laboratory</div>
+      <h1>Laboratory &amp; Diagnostics</h1>
+      <p>Accurate, timely diagnostic services — from routine blood work to imaging. Demo pricing shown in NPR.</p>
+    </div>
+  </div>
+  <section>
+    <div class="container">
+      <div class="lab-cats" id="labCats"></div>
+      <div style="overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius-md);">
+        <table class="lab-table">
+          <thead><tr><th>Test Name</th><th>Category</th><th>Report Time</th><th>Demo Price (NPR)</th></tr></thead>
+          <tbody id="labTableBody"></tbody>
+        </table>
+      </div>
+      <p style="margin-top:18px;font-size:13px;color:var(--ink-500);">* Demo pricing for presentation purposes only — actual prices to be confirmed by the hospital.</p>
+    </div>
+  </section>
+</section>
+
+<!-- ============================================================ -->
+<!-- ============ PAGE: GALLERY ============ -->
+<!-- ============================================================ -->
+<section class="page" id="page-gallery">
+  <div class="page-header">
+    <div class="container">
+      <div class="crumb"><a href="#home" onclick="go('home')">Home</a> / Gallery</div>
+      <h1>Facility Gallery</h1>
+      <p>A visual look inside Om Aasha Hospital. Demo placeholders — replace with real photography.</p>
+    </div>
+  </div>
+  <section>
+    <div class="container">
+      <div class="gallery-grid" id="galleryFullGrid"></div>
+    </div>
+  </section>
+</section>
+
+<!-- ============================================================ -->
+<!-- ============ PAGE: CONTACT ============ -->
+<!-- ============================================================ -->
+<section class="page" id="page-contact">
+  <div class="page-header">
+    <div class="container">
+      <div class="crumb"><a href="#home" onclick="go('home')">Home</a> / Contact</div>
+      <h1>Contact Om Aasha Hospital</h1>
+      <p>We're here 24 hours a day. Reach out for appointments, emergencies, or general inquiries.</p>
+    </div>
+  </div>
+
+  <section>
+    <div class="container contact-grid">
+      <div class="contact-info-card" data-reveal>
+        <h3>Get in Touch</h3>
+        <div class="ci-row"><div class="ci-icon"><svg class="icon" viewBox="0 0 24 24"><path d="M12 21c-4.4-4-7-7.5-7-11a7 7 0 0 1 14 0c0 3.5-2.6 7-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div><div><div class="ci-label">Address</div><div class="ci-value">Chowk Campus Road, Ward No. 8,<br>Dhangadhi, Kailali, Nepal</div></div></div>
+        <div class="ci-row"><div class="ci-icon"><svg class="icon" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div><div><div class="ci-label">Phone</div><div class="ci-value"><a href="tel:+97791526649">+977 91-526649</a></div></div></div>
+        <div class="ci-row"><div class="ci-icon"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><div><div class="ci-label">Hours</div><div class="ci-value">Open 24 Hours, All Week</div></div></div>
+        <div class="ci-row"><div class="ci-icon"><svg class="icon" viewBox="0 0 24 24"><path d="m9 12 2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></div><div><div class="ci-label">Affiliation</div><div class="ci-value">APHIN · Rating 4.7/5</div></div></div>
+        <div class="ci-socials">
+          <a href="https://www.facebook.com/omasha.hospital?mibextid=ZbWKwL" target="_blank" rel="noopener" aria-label="Facebook"><svg class="icon" viewBox="0 0 24 24" fill="currentColor" stroke="none" style="color:#fff;"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg></a>
+          <a href="tel:+97791526649" aria-label="Call"><svg class="icon" viewBox="0 0 24 24" style="color:#fff;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
+        </div>
+      </div>
+
+      <div class="form-card" data-reveal>
+        <h3 style="font-size:20px;">Send us a message</h3>
+        <p style="color:var(--ink-500);font-size:13.5px;margin-top:4px;margin-bottom:20px;">Demo form — submissions are not sent anywhere.</p>
+        <form onsubmit="submitContact(event)">
+          <div class="form-grid">
+            <div class="field"><label>Full Name</label><input type="text" required placeholder="Your name"></div>
+            <div class="field"><label>Phone Number</label><input type="tel" required placeholder="98XXXXXXXX"></div>
+          </div>
+          <div class="field"><label>Email Address</label><input type="email" placeholder="you@example.com"></div>
+          <div class="field"><label>Department</label>
+            <select><option>General Inquiry</option><option>Emergency &amp; Trauma Care</option><option>Cardiology</option><option>Orthopedics &amp; Traumatology</option><option>Gynecology &amp; Obstetrics</option><option>Pediatrics</option><option>General &amp; Laparoscopic Surgery</option><option>Internal Medicine</option><option>ENT</option></select>
+          </div>
+          <div class="field"><label>Message</label><textarea rows="4" placeholder="How can we help you?"></textarea></div>
+          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">Send Message (Demo)</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0;">
+    <div class="container">
+      <div class="map-frame" data-reveal>
+        <iframe src="https://www.google.com/maps?q=Dhangadhi,Kailali,Nepal&output=embed" loading="lazy" allowfullscreen title="Om Aasha Hospital Map"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--blue-50);">
+    <div class="container" style="max-width:820px;">
+      <div class="section-head center" data-reveal>
+        <span class="eyebrow">FAQ</span>
+        <h2>Frequently Asked Questions</h2>
+      </div>
+      <div id="faqList" data-reveal></div>
+    </div>
+  </section>
+</section>
+
+</main>
+
+<!-- ============ FLOATING ACTIONS ============ -->
+<div class="fab-stack">
+  <a class="fab fab-book" href="#" onclick="openModal();return false;" aria-label="Book Appointment"><svg class="icon" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></a>
+  <a class="fab fab-call" href="tel:+97791526649" aria-label="Call Now"><svg class="icon" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
+</div>
+
+<!-- ============ APPOINTMENT MODAL ============ -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal()"><svg class="icon" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    <h3>Book an Appointment</h3>
+    <p class="sub">Demo booking form — no data is submitted or stored.</p>
+    <form onsubmit="submitAppointment(event)">
+      <div class="field"><label>Full Name</label><input type="text" required placeholder="Your name"></div>
+      <div class="field"><label>Phone Number</label><input type="tel" required placeholder="98XXXXXXXX"></div>
+      <div class="field"><label>Preferred Department</label>
+        <select><option>Emergency &amp; Trauma Care</option><option>Cardiology</option><option>Orthopedics &amp; Traumatology</option><option>Gynecology &amp; Obstetrics</option><option>Pediatrics</option><option>General &amp; Laparoscopic Surgery</option><option>Internal Medicine</option><option>ENT</option></select>
+      </div>
+      <div class="form-grid">
+        <div class="field"><label>Preferred Date</label><input type="date"></div>
+        <div class="field"><label>Preferred Time</label><input type="time"></div>
+      </div>
+      <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;margin-top:6px;">Confirm Appointment (Demo)</button>
+    </form>
+  </div>
+</div>
+
+<!-- ============ TOAST ============ -->
+<div class="toast" id="toast"><svg class="icon" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span id="toastMsg">Done</span></div>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <div class="brand-mark" style="width:40px;height:40px;"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" style="width:20px;height:20px;"><path d="M12 21s-7.5-4.6-10-9.5C.4 7.6 2.6 4 6.3 4c2 0 3.6 1.1 4.7 2.7C12.1 5.1 13.7 4 15.7 4c3.7 0 5.9 3.6 4.3 7.5C17.5 16.4 12 21 12 21z"/></svg></div>
+          <div class="name">Om Aasha Hospital</div>
+        </div>
+        <p class="footer-desc">A trusted multi-specialty hospital in Dhangadhi, Kailali — providing 24-hour emergency, diagnostic, and specialist care to Sudurpashchim Province.</p>
+        <div class="footer-socials">
+          <a href="https://www.facebook.com/omasha.hospital?mibextid=ZbWKwL" target="_blank" rel="noopener" aria-label="Facebook"><svg class="icon" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg></a>
+          <a href="tel:+97791526649" aria-label="Call"><svg class="icon" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#about" onclick="go('about')">About Us</a></li>
+          <li><a href="#departments" onclick="go('departments')">Departments</a></li>
+          <li><a href="#doctors" onclick="go('doctors')">Doctors</a></li>
+          <li><a href="#services" onclick="go('services')">Services</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>More</h4>
+        <ul>
+          <li><a href="#laboratory" onclick="go('laboratory')">Laboratory</a></li>
+          <li><a href="#gallery" onclick="go('gallery')">Gallery</a></li>
+          <li><a href="#contact" onclick="go('contact')">Contact</a></li>
+          <li><a href="#" onclick="openModal();return false;">Book Appointment</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>Chowk Campus Road, Ward No. 8, Dhangadhi, Kailali, Nepal</li>
+          <li><a href="tel:+97791526649">+977 91-526649</a></li>
+          <li>Open 24 Hours · APHIN Affiliated</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 Om Aasha Hospital Pvt. Ltd. — Demo website for design presentation.</div>
+      <div>Design demo by Kamal · Not affiliated with the actual hospital's official website</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ============ DATA ============ */
+const icons = {
+  emergency:'<path d="M22 12h-4l-3 9L9 3l-3 9H2"/>',
+  heart:'<path d="M12 21s-7.5-4.6-10-9.5C.4 7.6 2.6 4 6.3 4c2 0 3.6 1.1 4.7 2.7C12.1 5.1 13.7 4 15.7 4c3.7 0 5.9 3.6 4.3 7.5C17.5 16.4 12 21 12 21z"/>',
+  bone:'<path d="M17 10c.6-.6 1-1.4 1-2.3A3.2 3.2 0 0 0 14.8 4c-1 0-1.8.4-2.4 1.1L7 10.5c-.6.6-1.4 1-2.3 1A3.2 3.2 0 0 0 1.5 14.7c0 1 .4 1.8 1.1 2.4"/><path d="M7 14c-.6.6-1 1.4-1 2.3A3.2 3.2 0 0 0 9.2 20c1 0 1.8-.4 2.4-1.1L17 13.5c.6-.6 1.4-1 2.3-1a3.2 3.2 0 0 0 3.2-3.2c0-1-.4-1.8-1.1-2.4"/>',
+  baby:'<circle cx="12" cy="8" r="4"/><path d="M8 15c-2 1-3 2.5-3 5h14c0-2.5-1-4-3-5"/>',
+  female:'<circle cx="12" cy="8" r="5"/><path d="M12 13v8M9 18h6"/>',
+  surgery:'<path d="M6 3v6M6 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6zM18 3v6M18 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6zM6 15c0 3 2 5 6 5s6-2 6-5"/>',
+  stomach:'<path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 2 3h10a2 2 0 0 0 2-3l-5-9V3"/>',
+  ear:'<path d="M6 12a6 6 0 1 1 6 6c-1 0-2-.5-2-2v-1a2 2 0 0 1 2-2 2 2 0 0 0 0-4 4 4 0 0 0-4 4c0 4 3 7 3 9"/>',
+  lab:'<path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 2 3h10a2 2 0 0 0 2-3l-5-9V3"/><path d="M8.5 14h7"/>',
+  ambulance:'<path d="M22 12h-4l-3 9L9 3l-3 9H2"/>',
+  bed:'<rect x="3" y="10" width="18" height="8" rx="1"/><path d="M3 10V6a2 2 0 0 1 2-2h4v6M3 18v2M21 18v2"/>',
+  otIcon:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/>',
+  radiology:'<rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/>',
+  pharmacy:'<path d="M10.5 20.5 3.5 13.5a5 5 0 0 1 7-7l7 7a5 5 0 0 1-7 7z"/><path d="m8 12 3 3"/>',
+  checkup:'<path d="m9 12 2 2 4-4"/><circle cx="12" cy="12" r="9"/>',
+  reception:'<path d="M3 21h18M5 21V9l7-5 7 5v12M9 21v-6h6v6"/>',
+  icu:'<path d="M3 12h4l2-5 4 10 2-5h6"/>',
+  ward:'<rect x="3" y="10" width="18" height="8" rx="1"/><path d="M3 10V6a2 2 0 0 1 2-2h4v6"/>',
+  deluxe:'<path d="M12 2v20M2 12h20"/><circle cx="12" cy="12" r="9"/>',
+  exterior:'<path d="M3 21h18M5 21V9l7-6 7 6v12M9 21v-6h6v6"/>'
+};
+function ic(name,cls){return '<svg class="'+(cls||'icon')+'" viewBox="0 0 24 24">'+icons[name]+'</svg>';}
+
+const departments = [
+ {name:'Emergency & Trauma Care', icon:'emergency', desc:'24-hour emergency response, trauma stabilization and ambulance service.', tags:['24 Hrs','Ambulance','Trauma']},
+ {name:'Cardiology', icon:'heart', desc:'Diagnosis and treatment of heart conditions, ECG & cardiac screening.', tags:['ECG','Cardiac Screening']},
+ {name:'Orthopedics & Traumatology', icon:'bone', desc:'Bone, joint, and fracture care including minor orthopedic procedures.', tags:['Fractures','Joint Care']},
+ {name:'Gynecology & Obstetrics', icon:'female', desc:'Women\'s health, prenatal care, delivery and postnatal support.', tags:['Prenatal Care','Delivery']},
+ {name:'Pediatrics', icon:'baby', desc:'Comprehensive child healthcare from infancy through adolescence.', tags:['Vaccination','Child Care']},
+ {name:'General & Laparoscopic Surgery', icon:'surgery', desc:'Modern operation theatre for general and minimally invasive surgery.', tags:['Modular OT','Laparoscopy']},
+ {name:'Internal Medicine', icon:'stomach', desc:'Diagnosis and management of adult chronic and acute illnesses.', tags:['Diabetes','Hypertension']},
+ {name:'ENT (Ear, Nose & Throat)', icon:'ear', desc:'Treatment for ear, nose, throat and related head & neck conditions.', tags:['Hearing Care','Sinus Care']}
+];
+
+const doctors = [
+ {name:'Dr. Rajendra Bohara', spec:'Senior Cardiologist', deg:'MD (Cardiology)', exp:'15+ yrs', color1:'#0A5FA8', color2:'#062F52'},
+ {name:'Dr. Sunita Joshi', spec:'Gynecologist & Obstetrician', deg:'MS (OBGYN)', exp:'12+ yrs', color1:'#149A73', color2:'#0A5FA8'},
+ {name:'Dr. Prakash Chand', spec:'Orthopedic Surgeon', deg:'MS (Orthopedics)', exp:'10+ yrs', color1:'#1173C4', color2:'#149A73'},
+ {name:'Dr. Anita Airee', spec:'Pediatrician', deg:'MD (Pediatrics)', exp:'9+ yrs', color1:'#1BB587', color2:'#0A5FA8'},
+ {name:'Dr. Bikash Rawal', spec:'General & Laparoscopic Surgeon', deg:'MS (Surgery)', exp:'14+ yrs', color1:'#062F52', color2:'#1173C4'},
+ {name:'Dr. Manisha Bhatt', spec:'Internal Medicine Specialist', deg:'MD (Internal Medicine)', exp:'8+ yrs', color1:'#149A73', color2:'#062F52'}
+];
+
+const services = [
+ {name:'24-Hour Emergency & Ambulance', icon:'ambulance', desc:'Immediate response team and fully-equipped ambulance for critical cases, any time of day or night.'},
+ {name:'Inpatient Wards', icon:'ward', desc:'General, private and deluxe rooms designed for comfortable recovery with round-the-clock nursing care.'},
+ {name:'ICU & Critical Care', icon:'icu', desc:'Dedicated intensive care unit with continuous monitoring for critical patients.'},
+ {name:'Modular Operation Theatre', icon:'otIcon', desc:'Modern, sterile OT equipped for general, orthopedic, and laparoscopic procedures.'},
+ {name:'Laboratory & Pathology', icon:'lab', desc:'In-house lab offering routine and specialised diagnostic testing with fast turnaround.'},
+ {name:'Radiology & Imaging', icon:'radiology', desc:'X-Ray, ultrasound (USG), and ECG services with digital reporting.'},
+ {name:'24-Hour Pharmacy', icon:'pharmacy', desc:'On-site pharmacy stocked with essential medicines, open around the clock.'},
+ {name:'Health Checkup Packages', icon:'checkup', desc:'Affordable, bundled screening packages for individuals and families.'}
+];
+
+const labTests = [
+ {name:'Complete Blood Count (CBC)', cat:'Hematology', time:'2 Hrs', price:'350'},
+ {name:'Blood Sugar (Fasting/PP)', cat:'Biochemistry', time:'1 Hr', price:'150'},
+ {name:'Lipid Profile', cat:'Biochemistry', time:'3 Hrs', price:'900'},
+ {name:'Liver Function Test (LFT)', cat:'Biochemistry', time:'4 Hrs', price:'1,100'},
+ {name:'Kidney Function Test (KFT)', cat:'Biochemistry', time:'4 Hrs', price:'1,000'},
+ {name:'Thyroid Panel (TSH, T3, T4)', cat:'Hormone', time:'Same Day', price:'1,400'},
+ {name:'Urine Routine Examination', cat:'Pathology', time:'2 Hrs', price:'250'},
+ {name:'Widal Test (Typhoid)', cat:'Serology', time:'3 Hrs', price:'400'},
+ {name:'Hepatitis B & C Screening', cat:'Serology', time:'Same Day', price:'1,200'},
+ {name:'Digital X-Ray', cat:'Radiology', time:'30 Mins', price:'800'},
+ {name:'Ultrasound (USG) Abdomen', cat:'Radiology', time:'45 Mins', price:'1,500'},
+ {name:'ECG', cat:'Cardiology', time:'20 Mins', price:'500'}
+];
+
+const testimonials = [
+ {name:'Kamala Bohara', loc:'Dhangadhi, Kailali', text:'The emergency team responded so quickly when my father needed urgent care. Truly grateful for their professionalism.'},
+ {name:'Him Bahadur Saud', loc:'Baitadi', text:'Clean facility, caring nurses, and the doctors explained everything clearly. Best hospital experience in the region.'},
+ {name:'Radhika Joshi', loc:'Attariya, Kailali', text:'My delivery experience was smooth thanks to the gynecology team. They made me feel safe throughout.'},
+ {name:'Deepak Bhatt', loc:'Dhangadhi', text:'Got my lab results back the same day. Modern equipment and a genuinely friendly staff.'}
+];
+
+const galleryItems = [
+ {label:'Main Reception', icon:'reception'},
+ {label:'Emergency Ward', icon:'emergency'},
+ {label:'Operation Theatre', icon:'otIcon'},
+ {label:'ICU', icon:'icu'},
+ {label:'General Ward', icon:'ward'},
+ {label:'Deluxe Room', icon:'deluxe'},
+ {label:'Laboratory', icon:'lab'},
+ {label:'Pharmacy', icon:'pharmacy'},
+ {label:'Ambulance Bay', icon:'ambulance'},
+ {label:'Hospital Exterior', icon:'exterior'}
+];
+
+const faqs = [
+ {q:'What are your OPD hours?', a:'Our outpatient department (OPD) is generally open from early morning to evening, seven days a week. Emergency services are available 24 hours a day, every day of the year.'},
+ {q:'Do you provide 24-hour emergency service?', a:'Yes. Om Aasha Hospital operates a fully-staffed emergency department and ambulance service around the clock, including holidays.'},
+ {q:'Is Om Aasha Hospital affiliated with APHIN?', a:'Yes, the hospital is affiliated with APHIN (Association of Private Health Institutions Nepal) and maintains a 4.7/5 patient rating.'},
+ {q:'How can I book an appointment?', a:'You can book an appointment using the "Book Appointment" button on this website (demo), or by calling us directly at +977 91-526649.'},
+ {q:'Do you accept health insurance?', a:'Insurance and payment policies vary — please contact our reception directly at +977 91-526649 for the most current information.'},
+ {q:'Where is the hospital located?', a:'We are located at Chowk Campus Road, Ward No. 8, Dhangadhi, Kailali, Nepal. See the map on our Contact page for directions.'}
+];
+
+/* ============ RENDER HELPERS ============ */
+function initials(name){
+  const parts = name.replace('Dr. ','').split(' ');
+  return (parts[0][0]+(parts[1]?parts[1][0]:'')).toUpperCase();
+}
+
+function renderDeptCards(container, list){
+  container.innerHTML = list.map(d=>`
+    <div class="dept-card">
+      <div class="dc-icon">${ic(d.icon)}</div>
+      <h3>${d.name}</h3>
+      <p>${d.desc}</p>
+      <a href="#departments" class="dc-link" onclick="go('departments')">Learn more
+        <svg class="icon" viewBox="0 0 24 24" style="width:14px;height:14px;"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>`).join('');
+}
+
+function renderDeptDetail(container, list){
+  container.innerHTML = list.map(d=>`
+    <div class="dept-detail-card">
+      <div class="dd-icon">${ic(d.icon)}</div>
+      <div>
+        <h3>${d.name}</h3>
+        <p>${d.desc}</p>
+        <div class="dd-tags">${d.tags.map(t=>`<span>${t}</span>`).join('')}</div>
+      </div>
+      <a href="#" class="btn btn-ghost btn-sm" onclick="openModal();return false;">Book</a>
+    </div>`).join('');
+}
+
+function renderDoctorCards(container, list){
+  container.innerHTML = list.map(d=>`
+    <div class="doctor-card">
+      <div class="doc-avatar" style="background:linear-gradient(150deg,${d.color1},${d.color2});">
+        <span class="demo-tag">Demo Photo</span>
+        ${initials(d.name)}
+      </div>
+      <div class="doc-body">
+        <h3>${d.name}</h3>
+        <div class="spec">${d.spec}</div>
+        <div class="meta">
+          <span>${ic('checkup')} ${d.deg}</span>
+          <span>${ic('otIcon')} ${d.exp}</span>
+        </div>
+        <div class="doc-actions">
+          <a href="#" class="btn btn-primary btn-sm" onclick="openModal();return false;">Book</a>
+          <a href="tel:+97791526649" class="btn btn-ghost btn-sm">Call</a>
+        </div>
+      </div>
+    </div>`).join('');
+}
+
+function renderServices(container, list){
+  container.innerHTML = list.map(s=>`
+    <div class="svc-row">
+      <div class="si">${ic(s.icon)}</div>
+      <div><h3>${s.name}</h3><p>${s.desc}</p></div>
+    </div>`).join('');
+}
+
+function renderLabTable(list){
+  document.getElementById('labTableBody').innerHTML = list.map(t=>`
+    <tr><td>${t.name}</td><td><span class="lab-badge">${t.cat}</span></td><td>${t.time}</td><td>Rs. ${t.price}</td></tr>
+  `).join('');
+}
+
+function renderGallery(container, list){
+  const colors = ['#0A5FA8','#149A73','#062F52','#1173C4','#1BB587','#0A5FA8'];
+  container.innerHTML = list.map((g,i)=>`
+    <div class="g-tile" style="background:linear-gradient(150deg,${colors[i%colors.length]},#062F52);">
+      <span class="demo-tag">Demo</span>
+      ${ic(g.icon)}
+      <div class="g-label">${g.label}</div>
+    </div>`).join('');
+}
+
+function renderFaq(){
+  document.getElementById('faqList').innerHTML = faqs.map((f,i)=>`
+    <div class="faq-item" id="faq-${i}">
+      <div class="faq-q" onclick="toggleFaq(${i})">
+        <h4>${f.q}</h4>
+        <div class="fq-plus"><svg class="icon" viewBox="0 0 24 24" style="width:14px;height:14px;"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+      </div>
+      <div class="faq-a"><p>${f.a}</p></div>
+    </div>`).join('');
+}
+function toggleFaq(i){
+  document.getElementById('faq-'+i).classList.toggle('open');
+}
+
+/* ============ TESTIMONIALS SLIDER ============ */
+let testiIndex = 0;
+function renderTestimonials(){
+  const track = document.getElementById('testiTrack');
+  const dots = document.getElementById('testiDots');
+  track.innerHTML = testimonials.map((t,i)=>`
+    <div class="testi-slide ${i===0?'active':''}" id="testi-${i}">
+      <div class="testi-stars">${'★★★★★'.split('').map(()=>'<svg class="icon" viewBox="0 0 24 24" fill="currentColor" stroke="none" style="width:16px;height:16px;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>').join('')}</div>
+      <p class="quote">"${t.text}"</p>
+      <div class="testi-person">
+        <div class="testi-avatar">${initials(t.name.split(' ')[0]+' '+ (t.name.split(' ')[1]||''))}</div>
+        <div><div class="tn">${t.name}</div><div class="tl">${t.loc} · Demo Testimonial</div></div>
+      </div>
+    </div>`).join('');
+  dots.innerHTML = testimonials.map((_,i)=>`<button onclick="setTesti(${i})" class="${i===0?'active':''}" id="dot-${i}"></button>`).join('');
+}
+function setTesti(i){
+  document.querySelectorAll('.testi-slide').forEach(s=>s.classList.remove('active'));
+  document.querySelectorAll('.testi-dots button').forEach(d=>d.classList.remove('active'));
+  document.getElementById('testi-'+i).classList.add('active');
+  document.getElementById('dot-'+i).classList.add('active');
+  testiIndex = i;
+}
+setInterval(()=>{ setTesti((testiIndex+1) % testimonials.length); }, 5500);
+
+/* ============ STATS COUNTER ============ */
+function animateCounters(){
+  document.querySelectorAll('.s-num').forEach(el=>{
+    if(el.dataset.done) return;
+    const target = parseInt(el.dataset.count,10);
+    let cur = 0;
+    const step = Math.max(1, Math.round(target/60));
+    const t = setInterval(()=>{
+      cur += step;
+      if(cur >= target){ cur = target; clearInterval(t); el.dataset.done = '1'; }
+      el.textContent = cur.toLocaleString();
+    }, 25);
+  });
+}
+
+/* ============ REVEAL ON SCROLL ============ */
+const revealObserver = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      e.target.classList.add('in');
+      if(e.target.querySelector && e.target.querySelector('.s-num')) animateCounters();
+      revealObserver.unobserve(e.target);
+    }
+  });
+},{threshold:.15});
+function observeReveals(){
+  document.querySelectorAll('[data-reveal]').forEach(el=>revealObserver.observe(el));
+  const statsSection = document.querySelector('.stats');
+  if(statsSection) revealObserver.observe(statsSection);
+}
+const pulseObserver = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in-view'); } });
+},{threshold:.4});
+document.querySelectorAll('[data-pulse]').forEach(el=>pulseObserver.observe(el));
+
+/* ============ PAGE ROUTER ============ */
+const pages = ['home','about','departments','doctors','services','laboratory','gallery','contact'];
+function go(page){
+  if(!pages.includes(page)) page = 'home';
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.getElementById('page-'+page).classList.add('active');
+  document.querySelectorAll('[data-nav]').forEach(a=>a.classList.toggle('active', a.dataset.nav===page));
+  window.scrollTo({top:0,behavior:'instant' in window ? 'instant':'auto'});
+  history.replaceState(null,'','#'+page);
+  document.getElementById('mobileMenu').classList.remove('open');
+  observeReveals();
+  return false;
+}
+window.addEventListener('load', ()=>{
+  const initial = (location.hash||'#home').replace('#','');
+  go(pages.includes(initial)?initial:'home');
+});
+
+/* ============ MOBILE MENU ============ */
+function toggleMobile(){ document.getElementById('mobileMenu').classList.toggle('open'); }
+
+/* ============ SEARCH ============ */
+function toggleSearch(){
+  document.getElementById('searchPanel').classList.toggle('open');
+  document.getElementById('searchInput').focus();
+}
+function runSearch(q){
+  const results = document.getElementById('searchResults');
+  q = q.trim().toLowerCase();
+  if(!q){ results.innerHTML=''; return; }
+  let matches = [];
+  departments.forEach(d=>{ if(d.name.toLowerCase().includes(q)) matches.push({cat:'Department',name:d.name,page:'departments'}); });
+  doctors.forEach(d=>{ if(d.name.toLowerCase().includes(q)||d.spec.toLowerCase().includes(q)) matches.push({cat:'Doctor',name:d.name+' — '+d.spec,page:'doctors'}); });
+  services.forEach(s=>{ if(s.name.toLowerCase().includes(q)) matches.push({cat:'Service',name:s.name,page:'services'}); });
+  labTests.forEach(t=>{ if(t.name.toLowerCase().includes(q)) matches.push({cat:'Lab Test',name:t.name,page:'laboratory'}); });
+  if(!matches.length){ results.innerHTML = '<div class="search-empty">No results. Try "cardiology", "doctor", "lab"…</div>'; return; }
+  results.innerHTML = matches.slice(0,8).map(m=>`<a href="#${m.page}" onclick="go('${m.page}');toggleSearch();">
+    <span class="r-cat">${m.cat}</span>${m.name}
+  </a>`).join('');
+}
+document.addEventListener('click', (e)=>{
+  const wrap = document.querySelector('.search-wrap');
+  if(wrap && !wrap.contains(e.target)) document.getElementById('searchPanel').classList.remove('open');
+});
+
+/* ============ MODAL ============ */
+function openModal(){ document.getElementById('modalOverlay').classList.add('open'); }
+function closeModal(){ document.getElementById('modalOverlay').classList.remove('open'); }
+document.getElementById('modalOverlay').addEventListener('click', (e)=>{ if(e.target.id==='modalOverlay') closeModal(); });
+
+/* ============ TOAST ============ */
+function showToast(msg){
+  const t = document.getElementById('toast');
+  document.getElementById('toastMsg').textContent = msg;
+  t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'), 3200);
+}
+function submitAppointment(e){
+  e.preventDefault();
+  closeModal();
+  showToast('Demo only: appointment request captured (not sent).');
+  e.target.reset();
+}
+function submitContact(e){
+  e.preventDefault();
+  showToast('Demo only: message captured (not sent).');
+  e.target.reset();
+}
+
+/* ============ INITIAL RENDER ============ */
+renderDeptCards(document.getElementById('deptGridHome'), departments.slice(0,4));
+renderDeptDetail(document.getElementById('deptDetailList'), departments);
+renderDoctorCards(document.getElementById('docGridHome'), doctors.slice(0,3));
+renderDoctorCards(document.getElementById('docGridFull'), doctors);
+renderServices(document.getElementById('svcList'), services);
+renderLabTable(labTests);
+renderGallery(document.getElementById('galleryPreviewGrid'), galleryItems.slice(0,4));
+renderGallery(document.getElementById('galleryFullGrid'), galleryItems);
+renderTestimonials();
+renderFaq();
+
+// lab category filter
+const labCategories = ['All', ...new Set(labTests.map(t=>t.cat))];
+document.getElementById('labCats').innerHTML = labCategories.map((c,i)=>`<button class="lab-cat-btn ${i===0?'active':''}" onclick="filterLab('${c}',this)">${c}</button>`).join('');
+function filterLab(cat, btn){
+  document.querySelectorAll('.lab-cat-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  renderLabTable(cat==='All' ? labTests : labTests.filter(t=>t.cat===cat));
+}
+
+observeReveals();
+</script>
+</body>
+</html>
